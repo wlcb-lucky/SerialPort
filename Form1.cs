@@ -88,41 +88,64 @@ namespace SerialPortTools
         // the data display on application opening
         private void Form1_Load(object sender, EventArgs e)
         {
-            //Port
-            string[] arrPorts;
-            ArrayList arr_Ports = new ArrayList();
-            for (int i = 1; i <= 10; i++)
+            try 
             {
-                arr_Ports.Add("COM" + i);
-            }
-            arrPorts = (string[])arr_Ports.ToArray(typeof(string));
-            //Rate
-            int[] arrRate;
-            ArrayList list_Rate = new ArrayList();
-            for (int i = 300; i < 115200 * 2; i *= 2)
-            {
-                list_Rate.Add(i);
-                if (i == 38400)
-                {
-                    i = 57600;
-                    list_Rate.Add(57600);
-                }
-            }
-            arrRate = (int[])list_Rate.ToArray(typeof(int));
-            //Proof
-            string[] arrProof = { "None", "Even", "Odd" };
-            //DataBits
-            string[] arrDataLenght = { "8", "7" };
-            //StopBits
-            string[] arrStopBits = { "1", "2" };
 
-            //Put the Data to display
-            this.Cb_Port.DataSource = arrPorts;
-            this.Cb_Rate.DataSource = arrRate;
-            this.Cb_Proof.DataSource = arrProof;
-            this.Cb_DataLenght.DataSource = arrDataLenght;
-            this.Cb_StopBits.DataSource = arrStopBits;
-            this.Cb_Rate.SelectedIndex = 5;
+                //Get the ports of computer
+                string[] sys_Ports = SerialPort.GetPortNames();
+
+                if (sys_Ports != null)
+                {
+                    //this.Lb_Send_Status.Text = sys_Ports[0].ToString();
+                    //foreach (string port in sys_Ports)
+                    //{
+                    //    this.Cb_Test.Items.Add(port);
+                    //}
+                    this.Cb_Port.DataSource = sys_Ports;
+                }
+
+
+                ////Port
+                //string[] arrPorts;
+                //ArrayList arr_Ports = new ArrayList();
+                //for (int i = 1; i <= 10; i++)
+                //{
+                //    arr_Ports.Add("COM" + i);
+                //}
+                //arrPorts = (string[])arr_Ports.ToArray(typeof(string));
+
+
+                //Rate
+                int[] arrRate;
+                ArrayList list_Rate = new ArrayList();
+                for (int i = 300; i < 115200 * 2; i *= 2)
+                {
+                    list_Rate.Add(i);
+                    if (i == 38400)
+                    {
+                        i = 57600;
+                        list_Rate.Add(57600);
+                    }
+                }
+                arrRate = (int[])list_Rate.ToArray(typeof(int));
+                //Proof
+                string[] arrProof = { "None", "Even", "Odd" };
+                //DataBits
+                string[] arrDataLenght = { "8", "7" };
+                //StopBits
+                string[] arrStopBits = { "1", "2" };
+
+                //Put the Data to display
+                this.Cb_Rate.DataSource = arrRate;
+                this.Cb_Proof.DataSource = arrProof;
+                this.Cb_DataLenght.DataSource = arrDataLenght;
+                this.Cb_StopBits.DataSource = arrStopBits;
+                this.Cb_Rate.SelectedIndex = 5;
+            }
+            catch(Exception error)
+            {
+                this.Lb_Status.Text = error.Message;
+            }
         }
 
         //Function of send button

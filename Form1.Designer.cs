@@ -45,7 +45,6 @@
             this.Lb_Data_Lenght = new System.Windows.Forms.Label();
             this.Cb_DataLenght = new System.Windows.Forms.ComboBox();
             this.Bt_Send = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.Gb_Status = new System.Windows.Forms.GroupBox();
             this.Lb_Status = new System.Windows.Forms.Label();
             this.Lb_StopBits = new System.Windows.Forms.Label();
@@ -195,22 +194,13 @@
             // 
             // Bt_Send
             // 
-            this.Bt_Send.Location = new System.Drawing.Point(398, 251);
+            this.Bt_Send.Location = new System.Drawing.Point(389, 294);
             this.Bt_Send.Name = "Bt_Send";
             this.Bt_Send.Size = new System.Drawing.Size(92, 42);
             this.Bt_Send.TabIndex = 2;
             this.Bt_Send.Text = "Send";
             this.Bt_Send.UseVisualStyleBackColor = true;
             this.Bt_Send.Click += new System.EventHandler(this.Bt_Send_Click);
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(398, 338);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(92, 42);
-            this.button5.TabIndex = 2;
-            this.button5.Text = "button1";
-            this.button5.UseVisualStyleBackColor = true;
             // 
             // Gb_Status
             // 
@@ -298,7 +288,6 @@
             this.Controls.Add(this.Cb_Proof);
             this.Controls.Add(this.Cb_Rate);
             this.Controls.Add(this.Cb_Port);
-            this.Controls.Add(this.button5);
             this.Controls.Add(this.Bt_Send);
             this.Controls.Add(this.Bt_Input);
             this.Controls.Add(this.Bt_Reading);
@@ -343,7 +332,6 @@
         private System.Windows.Forms.Label Lb_Data_Lenght;
         private System.Windows.Forms.ComboBox Cb_DataLenght;
         private System.Windows.Forms.Button Bt_Send;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.ComboBox Cb_Port;
         private System.Windows.Forms.GroupBox Gb_Status;
         private System.Windows.Forms.Label Lb_Status;
