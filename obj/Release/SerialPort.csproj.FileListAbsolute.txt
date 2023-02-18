@@ -1,0 +1,11 @@
+D:\25895\Work\MT\HMI\C#\SerialPort\bin\Release\SerialPortTools.exe.config
+D:\25895\Work\MT\HMI\C#\SerialPort\bin\Release\SerialPortTools.exe
+D:\25895\Work\MT\HMI\C#\SerialPort\bin\Release\SerialPortTools.pdb
+D:\25895\Work\MT\HMI\C#\SerialPort\obj\Release\SerialPort.csproj.AssemblyReference.cache
+D:\25895\Work\MT\HMI\C#\SerialPort\obj\Release\SerialPort.csproj.SuggestedBindingRedirects.cache
+D:\25895\Work\MT\HMI\C#\SerialPort\obj\Release\SerialPortTools.Form1.resources
+D:\25895\Work\MT\HMI\C#\SerialPort\obj\Release\SerialPortTools.Properties.Resources.resources
+D:\25895\Work\MT\HMI\C#\SerialPort\obj\Release\SerialPort.csproj.GenerateResource.cache
+D:\25895\Work\MT\HMI\C#\SerialPort\obj\Release\SerialPort.csproj.CoreCompileInputs.cache
+D:\25895\Work\MT\HMI\C#\SerialPort\obj\Release\SerialPortTools.exe
+D:\25895\Work\MT\HMI\C#\SerialPort\obj\Release\SerialPortTools.pdb
